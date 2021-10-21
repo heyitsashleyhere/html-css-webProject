@@ -6,15 +6,51 @@ footer {
 
     .social-container {
         @include flexCenter(row);
+
         img {
             width: 3rem;
             margin: 0.4em;
             cursor: pointer;
-            opacity: 0.7;
+            opacity: 0.8;
+        } 
+        
+        .twitter-btn {
             &:hover {
-                opacity: 1;
+                @include btnHover;
+                box-shadow: 0 0 10px #67bdff;
             }
         }
+
+        .github-btn {
+            &:hover {
+                @include btnHover;
+                box-shadow: 0 0 10px #8062ac;
+            }
+        }
+
+        .linkedin-btn {
+            &:hover {
+                @include btnHover;
+                box-shadow: 0 0 10px #039de9;
+            }
+        }
+
+        .email-btn {
+            &:hover {
+                @include btnHover;
+                box-shadow: 0 0 10px #ffcd19;
+            }
+        }
+
+        .up-btn {
+            border-radius: 50%;
+            border: 1px solid white;
+            &:hover {
+                @include btnHover;
+                box-shadow: 0 0 10px white;
+            }
+        }
+
     }
 
     p {

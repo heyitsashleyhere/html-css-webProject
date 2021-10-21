@@ -68,11 +68,11 @@ header .main-text #en:checked ~ .en-label {
 }
 
 header .main-text #de:checked ~ .de-label {
-  color: yellowgreen;
+  color: #9acd32;
 }
 
 header .main-text #ch:checked ~ .ch-label {
-  color: palevioletred;
+  color: #d87093;
 }
 
 header .main-text #en:checked ~ .english,
@@ -120,7 +120,7 @@ header .main-text .de-label:hover {
 }
 
 header .main-text .de-label:hover {
-  color: yellowgreen;
+  color: #9acd32;
 }
 
 header .main-text .ch-label {
@@ -141,7 +141,7 @@ header .main-text .ch-label:hover {
 }
 
 header .main-text .ch-label:hover {
-  color: palevioletred;
+  color: #d87093;
 }
 
 header .main-text .english {
@@ -195,6 +195,33 @@ header .main-text .english .name {
   font-size: 2rem;
   text-decoration: none;
   color: #001eff;
+  display: inline-block;
+  position: relative;
+}
+
+header .main-text .english .name::after {
+  content: '';
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  width: 100%;
+  height: 5%;
+  background-color: #001eff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+header .main-text .english .name:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 @media screen and (min-width: 768px) {
@@ -225,7 +252,7 @@ header .main-text .german img {
 }
 
 header .main-text .german .twitter {
-  color: yellowgreen;
+  color: #9acd32;
   text-decoration: none;
 }
 
@@ -238,7 +265,7 @@ header .main-text .german .twitter:hover + img {
 }
 
 header .main-text .german .github {
-  color: yellowgreen;
+  color: #9acd32;
   text-decoration: none;
 }
 
@@ -253,7 +280,34 @@ header .main-text .german .github:hover + img {
 header .main-text .german .name {
   font-size: 2rem;
   text-decoration: none;
-  color: yellowgreen;
+  color: #9acd32;
+  display: inline-block;
+  position: relative;
+}
+
+header .main-text .german .name::after {
+  content: '';
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  width: 100%;
+  height: 5%;
+  background-color: #9acd32;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+header .main-text .german .name:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 @media screen and (min-width: 768px) {
@@ -285,7 +339,7 @@ header .main-text .chinese img {
 }
 
 header .main-text .chinese .twitter {
-  color: palevioletred;
+  color: #d87093;
   text-decoration: none;
 }
 
@@ -298,7 +352,7 @@ header .main-text .chinese .twitter:hover + img {
 }
 
 header .main-text .chinese .github {
-  color: palevioletred;
+  color: #d87093;
   text-decoration: none;
 }
 
@@ -313,7 +367,34 @@ header .main-text .chinese .github:hover + img {
 header .main-text .chinese .name {
   font-size: 2rem;
   text-decoration: none;
-  color: palevioletred;
+  color: #d87093;
+  display: inline-block;
+  position: relative;
+}
+
+header .main-text .chinese .name::after {
+  content: '';
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  width: 100%;
+  height: 5%;
+  background-color: #d87093;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+header .main-text .chinese .name:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 @media screen and (min-width: 768px) {
@@ -325,6 +406,108 @@ header .main-text .chinese .name {
 header img {
   grid-area: img;
   width: 100%;
+}
+
+#webEn {
+  text-decoration: none;
+  color: #001eff;
+  display: inline-block;
+  position: relative;
+}
+
+#webEn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #001eff;
+  opacity: 0.2;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+#webEn:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+#webDe {
+  text-decoration: none;
+  color: #9acd32;
+  display: inline-block;
+  position: relative;
+}
+
+#webDe::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9acd32;
+  opacity: 0.2;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+#webDe:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+#webCh {
+  text-decoration: none;
+  color: #d87093;
+  display: inline-block;
+  position: relative;
+}
+
+#webCh::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d87093;
+  opacity: 0.2;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+#webCh:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 main {
@@ -491,7 +674,7 @@ section .slide-container .slide-navigation {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  bottom: -1.6rem;
+  bottom: -1.3rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -512,6 +695,21 @@ section .slide-container .slide-navigation {
 section .slide-container .slide-navigation .bar {
   width: 4.8rem;
   height: 0.8rem;
+  color: white;
+  font-size: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border: 1px solid white;
   margin: 0.5em;
   cursor: pointer;
@@ -537,6 +735,9 @@ section .slide-container .slide-navigation .bar {
 
 section .slide-container .slide-navigation .bar:hover {
   background: white;
+  color: #000A2B;
+  -webkit-box-shadow: 0 0 5px #ffffff;
+          box-shadow: 0 0 5px #ffffff;
 }
 
 #pro-1:checked ~ .slide-1 {
@@ -590,11 +791,57 @@ footer .social-container img {
   width: 3rem;
   margin: 0.4em;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
-footer .social-container img:hover {
+footer .social-container .twitter-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   opacity: 1;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px #67bdff;
+          box-shadow: 0 0 10px #67bdff;
+}
+
+footer .social-container .github-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px #8062ac;
+          box-shadow: 0 0 10px #8062ac;
+}
+
+footer .social-container .linkedin-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px #039de9;
+          box-shadow: 0 0 10px #039de9;
+}
+
+footer .social-container .email-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px #ffcd19;
+          box-shadow: 0 0 10px #ffcd19;
+}
+
+footer .social-container .up-btn {
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+footer .social-container .up-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
 }
 
 footer p {

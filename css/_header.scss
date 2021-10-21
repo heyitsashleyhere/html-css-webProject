@@ -1,6 +1,6 @@
 $en-color: #001eff;
-$de-color: yellowgreen;
-$ch-color: palevioletred;
+$de-color: #9acd32;
+$ch-color: #d87093;
 
 header {
     width: 100%;
@@ -70,16 +70,17 @@ header {
             @include langDiv;
 
             .twitter {
-                @include twitter($en-color)
+                @include twitter($en-color);
             }
 
             .github {
-                @include github($en-color)
+                @include github($en-color);
             }
 
             .name {
-                @include name($en-color)
+                @include name($en-color);
             }
+
         }
 
                 
@@ -87,16 +88,17 @@ header {
             @include langDiv;
 
             .twitter {
-                @include twitter($de-color)
+                @include twitter($de-color);
             }
 
             .github {
-                @include github($de-color)
+                @include github($de-color);
             }
 
             .name {
-                @include name($de-color)
+                @include name($de-color);
             }
+
         }
 
                 
@@ -105,16 +107,17 @@ header {
             letter-spacing: 0.2em;
 
             .twitter {
-                @include twitter($ch-color)
+                @include twitter($ch-color);
             }
 
             .github {
-                @include github($ch-color)
+                @include github($ch-color);
             }
 
             .name {
-                @include name($ch-color)
+                @include name($ch-color);
             }
+
         }
 
     }
@@ -124,4 +127,16 @@ header {
         width: 100%;
     }
 
+}
+
+#webEn {
+    @include webdeveloper($en-color)
+}
+
+#webDe {
+    @include webdeveloper($de-color)
+}
+
+#webCh {
+    @include webdeveloper($ch-color)
 }

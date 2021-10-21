@@ -6,7 +6,6 @@
     &:hover {
         transform: translateY(-5px);
     }
-
     @media screen and (min-width:768px) {
         font-size: 4rem;
     }
@@ -21,7 +20,6 @@
         width: 1rem;
         display: none
     }
-
     @media screen and (min-width:768px) {
         font-size: 2rem;
         img {
@@ -34,6 +32,26 @@
     font-size: 2rem;
     text-decoration: none;
     color: $nameColor;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        width: 100%;
+        height: 5%;
+        background-color: $nameColor;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
 
     @media screen and (min-width:768px) {
         font-size: 4rem;
@@ -68,10 +86,43 @@
 
 }
 
+@mixin webdeveloper($webColor) {
+    text-decoration: none;
+    color: $webColor;
+    display: inline-block;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $webColor;
+        opacity: 0.2;
+        transition: transform .3s ease;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
 // ////////// section & footer \\\\\\\\\\\\\\\\\
 @mixin flexCenter($direction) {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: $direction;
+}
+
+@mixin btnHover {
+    transform: scale(1.2);
+    opacity: 1;
+    border-radius: 50%;
 }
