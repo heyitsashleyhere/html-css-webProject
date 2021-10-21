@@ -1,0 +1,127 @@
+$en-color: #001eff;
+$de-color: yellowgreen;
+$ch-color: palevioletred;
+
+header {
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    grid-template: 
+    "text" 8fr
+    "img" 4fr;
+
+    @media screen and (min-width:768px) {
+        height: 100vh;
+    }
+
+    .main-text {
+        grid-area: text;
+        padding: 20% 10% 0 10%;
+        background-color: white;
+
+        @media screen and (min-width:768px) {
+        padding: 10% 10% 0 10%;
+        }
+
+        input {
+            display: none;
+        }
+
+        #en:checked ~ .en-label {
+            color: $en-color;
+        }
+
+        #de:checked ~ .de-label {
+            color: $de-color;
+        }
+
+        #ch:checked ~ .ch-label {
+            color: $ch-color;
+        }
+
+        #en:checked ~ .english,
+        #de:checked ~ .german,
+        #ch:checked ~ .chinese {
+            display: block
+        }
+
+        .en-label {
+            @include label;
+            &:hover {
+                color: $en-color;
+            }
+        }
+
+        .de-label {
+            @include label;
+            &:hover {
+                color: $de-color;
+            }
+        }
+
+        .ch-label {
+            @include label;
+            &:hover {
+                color: $ch-color;
+            }
+        }
+        
+        .english {
+            @include langDiv;
+
+            .twitter {
+                @include twitter($en-color)
+            }
+
+            .github {
+                @include github($en-color)
+            }
+
+            .name {
+                @include name($en-color)
+            }
+        }
+
+                
+        .german {
+            @include langDiv;
+
+            .twitter {
+                @include twitter($de-color)
+            }
+
+            .github {
+                @include github($de-color)
+            }
+
+            .name {
+                @include name($de-color)
+            }
+        }
+
+                
+        .chinese {
+            @include langDiv;
+            letter-spacing: 0.2em;
+
+            .twitter {
+                @include twitter($ch-color)
+            }
+
+            .github {
+                @include github($ch-color)
+            }
+
+            .name {
+                @include name($ch-color)
+            }
+        }
+
+    }
+
+    img {
+        grid-area: img;
+        width: 100%;
+    }
+
+}

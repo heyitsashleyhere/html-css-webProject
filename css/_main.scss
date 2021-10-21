@@ -1,0 +1,48 @@
+main {
+    width: 100%;
+    padding: 0 1em;
+
+    p:not(p:first-of-type) {
+        margin: 1em 0;
+    }
+
+    p {
+        color: black;
+
+        a {
+            text-decoration: none;
+            color: blue;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    h2 {
+        text-shadow: 1px 1px 1px rgba(36,36,36,0.6); 
+    }
+
+    h3, div {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    @media screen and (min-width:768px) {
+        padding: 0 3em;
+
+        h2 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 2rem;
+            width: 68%;
+        }
+
+        h3 {
+            font-size: 3rem;
+        }
+    }
+    
+}
