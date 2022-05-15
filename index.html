@@ -44,14 +44,29 @@
 
         <main>
             <h2 id="about-me">Here's the story...</h2>
-            <p>As a new mother &#x1F931&#x1F3FB and new resident in Germany &#x1F968, I found myself in a midlife crisis situation in the middle of the pandemic &#x1F9A0.</p>
-            <p>With a product design background and some experience in digital marketing, I decided to adventure in the tech world.</p>
+            <p>As a new mother &#x1F931&#x1F3FB and new expat living in Germany &#x1F968, I found myself in a midlife crisis situation in the middle of the pandemic &#x1F9A0.</p>
+            <p>With an industrial design background and some experience in digital marketing, I decided to adventure in the tech world.</p>
             <p>And here I am! &#x1F469&#x1F3FB&#x200D&#x1F4BB In the process of completing a 14month web-dev training program with <a href="https://digitalcareerinstitute.org/" target="_blank">DCI</a>.</p>
 
-            <h3>Days until course completion</h3>
-            <div data-type="countdown" data-id="2831694" class="tickcounter" style="width: 100%; position: relative; padding-bottom: 25%"><a href="//www.tickcounter.com/countdown/2831694/days-until-course-completion" title="Days until course completion">Days until course completion</a><a href="//www.tickcounter.com/" title="Countdown">Countdown</a></div><script>(function(d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//www.tickcounter.com/static/js/loader.js"; pjs.parentNode.insertBefore(js, pjs); }(document, "script", "tickcounter-sdk"));</script>            
+            <div class="countdown-container">
+                <h3 id="headline">Countdown to my course completion</h3>
+                <div id="countdown">
+                  <ul>
+                    <li><span id="days"></span>DAYS</li>
+                    <li><span id="hours"></span>HOURS</li>
+                    <li><span id="minutes"></span>MINUTES</li>
+                    <li><span id="seconds"></span>SECONDS</li>
+                  </ul>
+                </div>
+                <div id="content" class="emoji">
+                  <span>🥳</span>
+                  <span>🎉</span>
+                  <span>🍾</span>
+                </div>
+              </div>
+            <!-- <div data-type="countdown" data-id="2831694" class="tickcounter" style="width: 100%; position: relative; padding-bottom: 25%"><a href="//www.tickcounter.com/countdown/2831694/days-until-course-completion" title="Days until course completion">Days until course completion</a><a href="//www.tickcounter.com/" title="Countdown">Countdown</a></div><script>(function(d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//www.tickcounter.com/static/js/loader.js"; pjs.parentNode.insertBefore(js, pjs); }(document, "script", "tickcounter-sdk"));</script>             -->
             
-            <p>Not your typical crazy cat lady, I am the crazy cat lady who can code <em>(eventually)</em> &#x1F431&#x200D&#x1F4BB</p>
+            <p>Not your typical crazy cat lady, I am the crazy cat lady who can <span class="hover-code">code</span>&#x1F431&#x200D&#x1F4BB</p>
         </main>
 
         <section>
@@ -104,6 +119,46 @@
             <p>&copy2021 Ashley Jiang</p>
         </footer>
 
-    </div>   
+    </div>
+    
+    <script>
+        (function () {
+            const second = 1000,
+                    minute = second * 60,
+                    hour = minute * 60,
+                    day = hour * 24;
+                    
+            let today = new Date(),
+                dd = String(today.getDate()).padStart(2, "0"),
+                mm = String(today.getMonth() + 1).padStart(2, "0"),
+                yyyy = today.getFullYear(),
+                dayMonth = "09/30/",
+                completion = "09/15/2022"
+            
+            today = mm + "/" + dd + "/" + yyyy;
+  
+        const countDown = new Date(completion).getTime(),
+        x = setInterval(function() {    
+
+        const now = new Date().getTime(),
+              distance = countDown - now;
+
+              
+          document.getElementById("days").innerText = Math.floor(distance / (day))
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour))
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute))
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second)
+
+        //do something later when date is reached
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "I have graduated!";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+      }, 0)
+  }());
+
+    </script>
 </body>
 </html>
