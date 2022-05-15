@@ -2,7 +2,7 @@
   Ashley Jiang's Website
 </h1>
 <p align="center">
-  The 2nd iteration of <a href="https://heyitsashleyhere.github.io/Portfolio-v3/" target="_blank">my personal website
+  The 2nd iteration of <a href="https://heyitsashleyhere.github.io/html-css-webProject/" target="_blank">my personal website
 </p>
 <p align="center">
   Previous iterations:
