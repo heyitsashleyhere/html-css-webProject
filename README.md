@@ -11,7 +11,7 @@
 
 ## 🗒️ Overview
 
-Built a simple personal website to showcase my growth as a web-developer from the start of my journey in 2021. This is my 2nd iteration I build in 2022, right after learning HTML and CSS. I didn't know any Javascript at the time and used a plugin. But now I added some simple Javascript for the countdown calender. Strange feeling to go through my old codes, even though it was just a couple months ago. Please feel free to reach out to my and give me feedbacks :) 
+Built a simple personal website to showcase my growth as a web-developer from the start of my journey in 2021. This is my 2nd iteration I build right after learning HTML and CSS (9 weeks). I didn't know any Javascript at the time and used a plugin. But now (in 2022) I added some simple Javascript for the countdown calender. Strange feeling to go through my old codes, even though it was just a couple months ago. Please feel free to reach out to my and give me feedbacks :) 
 
 ## 📲 Contact
 
